@@ -1,4 +1,4 @@
-val scalaTestArtifact = "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+val scalaTestArtifact = "org.scalatest" %% "scalatest" % "3.1.1" % "test"
 
 lazy val commonSettings = Seq(
   scalacOptions ++= Seq("-deprecation", "-feature", "-Xlint", "-Xfatal-warnings"),

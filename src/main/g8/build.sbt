@@ -5,6 +5,7 @@ lazy val commonSettings = Seq(
   version := "$version$",
   scalaVersion := "$scala_version$",
   libraryDependencies += scalaTestArtifact,
+  fork := true,
   organization := "$organization$",
   test in assembly := {}  // skip test during assembly
 )

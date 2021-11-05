@@ -1,13 +1,12 @@
-val scalaTestArtifact = "org.scalatest" %% "scalatest" % "3.2.9" % Test
+val scalaTestArtifact = "org.scalatest" %% "scalatest" % "3.2.+" % Test
 
 lazy val commonSettings = Seq(
   scalacOptions ++= Seq("-deprecation", "-feature", "-Xlint"), // , "-Xfatal-warnings"),
-  version := "$version$",
   scalaVersion := "$scala_version$",
   libraryDependencies += scalaTestArtifact,
   fork := true,
   organization := "$organization$",
-  test in assembly := {}  // skip test during assembly
+  assembly / test := {}  // skip test during assembly
 )
 
 lazy val root = (project in file(".")).
